@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "joke-app",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/static-build"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*).js",
+            "dest": "/$1.js"
+        },
+        {
+            "src": "/.*",
+            "dest": "/index.html"
+        }
+    ]
+}
